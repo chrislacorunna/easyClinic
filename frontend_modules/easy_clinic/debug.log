@@ -1,0 +1,4 @@
+[0901/171146.664:ERROR:process_info.cc(375)] NtQuerySystemInformation SystemExtendedHandleInformation: {Za ma³o zasobów} Na³o¿ono zbyt œcis³e ograniczenia na iloœæ pamiêci wirtualnej lub plik stronicowania, aby mo¿liwe by³o zakoñczenie tej operacji. (0xc0000017)
+[0901/171150.865:ERROR:process_info.cc(359)] UncheckedAllocate
+[0901/171151.054:ERROR:process_info.cc(359)] UncheckedAllocate
+[0901/171151.054:ERROR:process_info.cc(359)] UncheckedAllocate
