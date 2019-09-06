@@ -10,10 +10,9 @@ class App extends React.Component<AppProps> {
   render() {
       return (
           <div className="App">
-              <header className="app-header">
-              </header>
-              <body className="app-body">
               <Header/>
+              <body className="app-body">
+
               </body>
           </div>
       );
