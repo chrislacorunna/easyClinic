@@ -1,0 +1,56 @@
+@import '../../variables';
+
+.header {
+  width: 100%;
+  height: 50px;
+  display: inline-flex;
+  .easy-clinic-logo {
+    float: left;
+    width: 220px;
+    height: $header-height;
+    background-color: $header-background-first-color;
+  }
+
+  .gradient-element {
+    background-image: linear-gradient(to right, $header-background-first-color, $header-background-second-color);
+    height: $header-height;
+    width: 100%;
+  }
+
+  .navigation-panel {
+    margin: 0;
+    padding: 0;
+    height: $header-height;
+    list-style-type: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    li {
+      display: inline-flex;
+      height: $header-height;
+      width: 120px;
+      justify-content: center;
+      color: $header-background-first-color;
+      &:hover {
+        background-color: $header-background-first-color;
+        color: white;
+        a {
+          color: white;
+        }
+      }
+      a {
+        margin: auto;
+        text-decoration: none;
+        color: $header-background-first-color;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
