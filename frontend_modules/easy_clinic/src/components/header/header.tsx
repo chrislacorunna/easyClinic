@@ -1,27 +1,20 @@
 import React from 'react';
 
 import './header.scss';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
-
-export enum AppMode {
-    DEFAULT, ADMIN, CUSTOMER
-}
+import {BrowserRouter as Router, Link} from "react-router-dom";
+import {AppMode} from "../../reducers/Types";
+import {connect} from "react-redux";
+import {StoreState} from "../../reducers";
 
 export interface HeaderState {
-    currentAppMode: AppMode;
+    appMode: AppMode;
 }
 
 export interface HeaderProps {
+    appMode: AppMode;
 }
 
-
 class Header extends React.Component<HeaderProps, HeaderState> {
-
-    componentWillMount(): void {
-        this.state = {
-            currentAppMode: AppMode.DEFAULT
-        }
-    }
 
     render(): React.ReactElement {
         return (
@@ -35,27 +28,40 @@ class Header extends React.Component<HeaderProps, HeaderState> {
         );
     }
 
-    public getNavbar()  {
+    private getNavbar()  {
         let homeElement = <li><Link to='/'>Home</Link></li>;
         let loginElement = <li><Link to='/login'>Sign In</Link></li>;
-        let registerElement = <li><Link to='/register'>Sign Up</Link></li>
+        let registerElement = <li><Link to='/register'>Sign Up</Link></li>;
 
-        switch (this.state.currentAppMode) {
+        let defaultCollection = (
+            <ul className='navigation-panel'>
+                {homeElement}
+                {loginElement}
+                {registerElement}
+            </ul>
+        );
+
+        let navbarCollection;
+
+        switch (this.props.appMode) {
             case (AppMode.DEFAULT): {
-                return (
-                    <Router>
-                        <ul className='navigation-panel'>
-                            {homeElement}
-                            {loginElement}
-                            {registerElement}
-                        </ul>
-                    </Router>
-                )
+                navbarCollection = defaultCollection;
             };
+            break;
         default:
             return null;
         }
+
+        return (
+            <Router>
+                {navbarCollection}
+            </Router>
+        )
     }
 }
 
-export default Header;
+const mapStateToProps = (state: StoreState) : HeaderProps => ({
+    appMode: state.appReducer.appMode
+})
+
+export default connect(mapStateToProps)(Header)
