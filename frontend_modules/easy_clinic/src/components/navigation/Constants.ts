@@ -1,0 +1,3 @@
+export const LOGIN_URL = 'https://easy-clinic.auth.us-east-2.amazoncognito.com/login?client_id=409u283ja0ksdem6vkg75vf29a&response_type=token&scope=email+openid&redirect_uri=http://localhost:3000/logged_in';
+export const REGISTRATION_URL = 'https://easy-clinic.auth.us-east-2.amazoncognito.com/signup?client_id=409u283ja0ksdem6vkg75vf29a&response_type=token&scope=email+openid&redirect_uri=http://localhost:3000/logged_in';
+export const LOGOUT_URL = 'https://easy-clinic.auth.us-east-2.amazoncognito.com/logout?client_id=409u283ja0ksdem6vkg75vf29a&response_type=token&scope=email+openid&logout_uri=http://localhost:3000/logout';

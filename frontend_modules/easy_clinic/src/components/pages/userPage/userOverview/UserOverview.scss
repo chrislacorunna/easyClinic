@@ -1,0 +1,23 @@
+.overview{
+  text-align: left;
+  display: inline-flex;
+  align-items: self-start;
+  .attribute-names {
+    width: 180px;
+    font-weight: bold;
+    text-align: left;
+    p {
+      align-items: self-start;
+    }
+
+    .attributes {
+      width: 900px;
+      p {
+        align-items: self-start;
+      }
+    }
+  }
+}
+.button {
+  padding: 0 5px;
+}

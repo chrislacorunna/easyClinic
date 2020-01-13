@@ -1,0 +1,30 @@
+@import '../../../../variables';
+
+.table-header {
+
+  background-color: $header-background-first-color;
+  .w240px {
+    width: 180px;
+  }
+}
+.header-text {
+  color: $header-background-second-color !important;
+}
+
+.actions {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+
+  .action {
+    padding: 0 5px;
+  }
+  .action-green {
+    padding: 0 5px;
+    color: #00b64f;
+  }
+}
+
+.flex {
+  margin: 20px 0;
+}

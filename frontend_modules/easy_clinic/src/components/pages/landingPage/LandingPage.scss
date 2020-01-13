@@ -1,0 +1,62 @@
+.landing-page {
+  margin: 20px auto;
+  width: 1080px;
+
+  .flex {
+    display: inline-flex;
+
+    .feature-field {
+      margin: 15px;
+    }
+
+    .login-panel {
+      width: 480px;
+
+      p {
+        margin: auto;
+        width: 90%;
+      }
+
+      a {
+        width: 60%;
+        margin: 10px;
+        color: #fdfdfd;
+      }
+
+      .mt30 {
+        margin-top: 30px;
+      }
+
+      #sing-in-button {
+        background-color: #00b64f;
+      }
+    }
+
+    .huge-photo {
+      margin-left: 5px;
+      width: 600px;
+      height: 400px;
+      padding: 3px;
+      background-color: #dddddd;
+      align-content: flex-end;
+
+      img {
+        margin: 32% auto;
+        width: 100px;
+      }
+    }
+
+    .small-photo {
+      margin: 10px 5px 5px 5px;
+      width: 170px;
+      height: 140px;
+      padding: 3px;
+      background-color: #dddddd;
+
+      img {
+        width: 100px;
+        margin: 35% auto;
+      }
+    }
+  }
+}
