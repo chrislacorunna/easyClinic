@@ -1,9 +1,9 @@
-package com.easyclinic.visit.dto;
+package com.easyclinic.payment.dto;
 
 import lombok.Data;
 
 @Data
-public class VisitDTO {
+public class VisitInterfaceDTO {
     private String visitId;
     private String date;
     private String specialist;
@@ -11,4 +11,5 @@ public class VisitDTO {
     private String patient;
     private String price;
     private String additionalNotice;
+
 }
