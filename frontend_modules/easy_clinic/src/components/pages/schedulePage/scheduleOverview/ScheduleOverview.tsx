@@ -9,7 +9,7 @@ import {getUsers} from "../../userPage/UserService";
 import {UserGeneralData} from "../../userPage/UsersTable/UserTable";
 import {getSchedule, saveSchedule} from "../ScheduleService";
 import Button from "@material-ui/core/Button";
-import {VisitPage, VisitProps} from "../../visitPage/VisitPage";
+import {VisitCreatePage, VisitProps} from "../../visitPage/create/VisitCreatePage";
 
 
 export interface ScheduleItem {
@@ -45,6 +45,7 @@ export const ScheduleOverview: React.FC = () => {
         date: '',
         employeeId: '',
         employeeDisplayName: '',
+        profession: '',
         onBack: () => setCurrentPage(ScheduleOverviewPages.OVERVIEW)
     });
 
@@ -76,10 +77,11 @@ export const ScheduleOverview: React.FC = () => {
     return (
         <div>
             {currentPage === ScheduleOverviewPages.VISIT && visitProps.employeeId !== '' &&
-                <VisitPage
+                <VisitCreatePage
                     date={visitProps.date}
                     employeeId={visitProps.employeeId}
                     employeeDisplayName={visitProps.employeeDisplayName}
+                    profession={visitProps.profession}
                     onBack={visitProps.onBack}/>}
             {currentPage === ScheduleOverviewPages.OVERVIEW && <DefaultPage
                 headerText={'Schedule'}
@@ -122,7 +124,8 @@ export const ScheduleOverview: React.FC = () => {
                                                             ...visitProps,
                                                             employeeId: employee.id,
                                                             employeeDisplayName: employee.name + ' ' + employee.surname + ' (' + employee.profession + ')',
-                                                            date: item.date + ' ' + record.time
+                                                            date: item.date + ' ' + record.time,
+                                                            profession: employee.profession as string
                                                             })
                                                         setCurrentPage(ScheduleOverviewPages.VISIT);
                                                         }}>

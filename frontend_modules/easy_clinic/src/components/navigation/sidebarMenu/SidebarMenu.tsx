@@ -15,6 +15,7 @@ import TodayIcon from '@material-ui/icons/Today';
 import {Link} from "react-router-dom";
 import {useStore} from "../../../reducers/RootReducer";
 import {UserType} from "../../../reducers/Types";
+import {LocalHospital, Payment} from "@material-ui/icons";
 
 const SidebarMenu: React.FC = () => {
     const classes = useStyles();
@@ -63,7 +64,18 @@ const SidebarMenu: React.FC = () => {
                                                        className={classes.listItemText}>Schedule</Link>} />
                 </ListItem>
             )}
+            <ListItem button className={classes.menuItem}>
+                <LocalHospital className={classes.menuItemIcon}></LocalHospital>
+                <ListItemText inset primary={<Link to={'/visit'}
+                                                   className={classes.listItemText}>Visits</Link>} />
+            </ListItem>
+            {(state.userType !== UserType.EMPLOYEE && <ListItem button className={classes.menuItem}>
+                <Payment className={classes.menuItemIcon}></Payment>
+                <ListItemText inset primary={<Link to={'/payment'}
+                                                   className={classes.listItemText}>Payments</Link>} />
+            </ListItem>)}
         </List>
+
     )
 }
 

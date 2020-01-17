@@ -7,6 +7,9 @@ import LogoutProxy from "../logout/LogoutProxy";
 import {UserPage} from "../pages/userPage/UserPage";
 import {ScheduleCreate} from "../pages/schedulePage/createSchedulePage/ScheduleCreate";
 import {ScheduleOverview} from "../pages/schedulePage/scheduleOverview/ScheduleOverview";
+import {VisitPage} from "../pages/visitPage/VisitPage";
+import {PaymentTable} from "../pages/payment/paymentTable/PaymentTable";
+import {DefaultPage} from "../pages/defaultPage/DefaultPage";
 
 
 interface RoutesProps {
@@ -41,6 +44,16 @@ export const Routes: React.FC<RoutesProps> = (props: RoutesProps) => {
                 path='/logout'
                 name ='logged out'
                 render={() => <LogoutProxy/>}
+            />
+            <Route
+                path='/visit'
+                name ='visit'
+                render={() => <VisitPage/>}
+            />
+            <Route
+                path='/payment'
+                name ='payment'
+                render={() => <DefaultPage headerText={'Payments'} component={<PaymentTable/>}/>}
             />
         </div>
     )
