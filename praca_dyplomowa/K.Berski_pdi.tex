@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage{lipsum}
+\usepackage[margin=1in,left=1.5in,includefoot]{geometry}
+\newcommand{\blank}[1]{\hspace*{#1}}
+\selectlanguage{polish}
+\author{Krzysztof Berski}
+% header and footer stuff
+\usepackage{fancyhdr}
+\usepackage{listings}
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+\fancyfoot[R]{\thepage\\}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{1pt}
+%
+ 
+\begin{document}
+ 
+\begin{titlepage}
+\end{titlepage}
+ 
+\pagenumbering{arabic}
+ 
+\tableofcontents
+
+\section{Wstęp}
+	\subsection{Zakres pracy}
+	\subsection{Zawartość pracy}
+	\subsection{Uzasadnienie wyboru tematu}
+	\subsubsection{Projekt NERW}
+\section{Wprowadzenie do mikroserwisów}
+	\subsection{Przyczyny powstania}
+	\subsection{Przykłady użycia}
+	\subsection{Opis koncepcji mikroserwisów}
+	\subsection{Porównanie do architektury monolitycznej}
+\section{Architektura mikroserwisowa}
+	\subsection{Komponenty w architekturze mikroserwisowej}
+	\subsection{Konteneryzacja}
+	\subsection{Komunikacja między mikroserwisami}
+	
+	
+\section{Usługi chmurowe}
+	\subsection{Amazon AWS}
+		\subsubsection{Cognito}
+		\subsubsection{EC2}
+		\subsubsection{RDS}
+	\subsection{Konsekwencje użycia architektury chmurowej}
+\section{Realizacja aplikacji}
+	\subsection{Koncepcja aplikacji}
+	\subsection{Warstwa serwerowa}
+	\subsection{Warstwa widoku}
+		\subsubsection{Ekrany aplikacji}
+
+\section{Podsumowanie}
+	\subsection{Ocena jakości aplikacji}
+	\subsection{Perspektywy rozwoju}
+	\subsection{Wnioski}
+		
+	
+
+- Wstęp (Wstęp do pracy, historia i przyczyna powstania, definicje, przykłady użycia)
+- Architektura Mikroserwisowa (diagramy, opis, praktyki, konteneryzacja, bezpieczeństwo)
+- Komunikacja w Architekturze Mikroserwisowej (diagramy sekwencji, konfiguracja komunikacji, typy komunikacji)
+- Usługi chmurowe w Architekturze Mikroserwisowej (koncepcja, dostawcy, usługi AWS, integracja usług z aplikacją, model serverless)
+- Opis funkcjonalny i techniczny aplikacji (Opis systemu, użyte technologie i ich porównanie do technologii konkurencyjnych)
+ 
+\end{document}
