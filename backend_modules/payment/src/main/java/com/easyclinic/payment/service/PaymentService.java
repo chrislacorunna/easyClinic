@@ -12,7 +12,7 @@ import java.util.ArrayList;
 @Service
 public class PaymentService {
 
-    private static final String VISIT_DETAILS_URL = "http://localhost:8082/visit/details";
+    private static final String VISIT_DETAILS_URL = "visit:8082/visit/details";
 
     @Autowired
     private PaymentRepository paymentRepository;

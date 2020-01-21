@@ -14,9 +14,9 @@ import java.util.ArrayList;
 @Service
 public class VisitService {
 
-    private final static String USER_URL = "http://localhost:8080/user/admin/getuserdetails";
-    private final static String VISIT_PRICE_URL = "http://localhost:8083/payment/price";
-    private final static String PAYMENT_CREATE_URL = "http://localhost:8083/payment/save";
+    private final static String USER_URL = "http://user:8080/user/admin/getuserdetails";
+    private final static String VISIT_PRICE_URL = "http://payment:8083/payment/price";
+    private final static String PAYMENT_CREATE_URL = "http://payment:8083/payment/save";
 
     @Autowired
     private VisitRepository visitRepository;
